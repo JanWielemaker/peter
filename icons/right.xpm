@@ -1,0 +1,29 @@
+/* XPM */
+static char * right_xpm[] = {
+/* width height ncolors chars_per_pixel */
+"18 18 5 1",
+/* colors */
+" 	c blue",
+".	c black",
+"X	c white",
+"o	c yellow",
+"O	c orange",
+/* pixels */
+"                  ",
+"                  ",
+"                  ",
+"                  ",
+"          .X      ",
+"          .oX     ",
+"  .XXXXXXXXooX    ",
+"  .OOOoOooOoooX   ",
+"  .OOOOoOooooooX  ",
+"  .OOoOOooooooo.  ",
+"  .OOOOoOoOooo.   ",
+"  .........oo.    ",
+"          .o.     ",
+"          ..      ",
+"                  ",
+"                  ",
+"                  ",
+"                  "};

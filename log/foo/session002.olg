@@ -1,0 +1,24 @@
+/*  Log file created by FILE
+    Date: Thu Jan 19 21:21:14 2012
+*/
+
+%% Header
+pp(foo).
+epoch(1327004474.9).
+%% End Header
+
+@(3.2, set(breakfast, bike)).
+@(4.3, set(bike, normal)).
+@(5.7, set(speed, normal)).
+@(6.7, set(books, extra)).
+@(7.4, set(shoes, sport)).
+@(15.3,
+  result([ breakfast(bike),
+	   bike(normal),
+	   speed(normal),
+	   books(extra),
+	   shoes(sport)
+	 ], 10,
+	 prediction(15))).
+@(64.4, selected(2)).
+@(65.2, deselected(2)).

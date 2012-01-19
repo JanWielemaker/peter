@@ -1,0 +1,7 @@
+  * CONFIG: added log_comment/1 for adding comments to log
+
+  * CONFIG: store file and modified time of config-file
+
+  * CHANGED: Ask minimum of two selected experiments before viewing them.
+
+  * FIXED: Writing correct result of experiment into logfile.

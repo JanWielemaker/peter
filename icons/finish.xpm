@@ -1,0 +1,42 @@
+/* XPM */
+static char * finish_xpm[] = {
+/* Finish pixmap
+* width height ncolors chars_per_pixel */
+"32 32 3 1",
+/* colors */
+" 	s None	m white	c None",
+".	s s_black	m black	c black",
+"X	s s_white	m white	c white",
+/* pixels */
+"                                ",
+"                                ",
+"   ..........                   ",
+"   ......XXXX....               ",
+"   .......XXXX.......           ",
+"   .......XXXXX..........       ",
+"    ......XXXXX......XXXX.      ",
+"    .......XXXX......XXXX.      ",
+"    ..XXXX......X.....XXXX.     ",
+"    ..XXXXX......XXX.......     ",
+"    ...XXXX......XXXX......     ",
+"    ...XXXXX.....XXXXX......    ",
+"     ..XXX........XXXX......    ",
+"     ........XX....XXX......    ",
+"     ........XXXX....X.......   ",
+"     .........XXX............   ",
+"     .........XXXX......XXXX.   ",
+"     ............X......XXXX.   ",
+"      .....      .......XXXXX.  ",
+"      ..           ......XXXX.  ",
+"      ..               .......  ",
+"       ..                       ",
+"       ..                       ",
+"        .                       ",
+"        ..                      ",
+"        ..                      ",
+"        ..                      ",
+"         ..                     ",
+"         ..                     ",
+"         ..                     ",
+"                                ",
+"                                "};

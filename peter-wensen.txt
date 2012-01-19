@@ -1,0 +1,14 @@
+Peter Zoekt Problemen
+---------------------
+
+- Hedderik, 991130
+
+
+Interface/Interactie gerelateerd
+--------------------------------
+
+- rearrange experiments moet slechts een van beide sets pijltjes tonen
+
+  - rearrage_experiments(true) levert rare snuiters op. Eigenlijk zou dan
+    alleen het pijltje omhoog/omlaag over moeten blijven. 
+
