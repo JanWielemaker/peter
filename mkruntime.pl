@@ -60,7 +60,7 @@ directory(Bin) :-
 		 *	   SEARCH PATHS		*
 		 *******************************/
 
-user:file_search_path(swi,     '/staff/jan/einstein/src/pl').
+%user:file_search_path(swi,     '/staff/jan/einstein/src/pl').
 user:file_search_path(runtime, Dir) :-
 	runtime_dir(Dir).
 user:file_search_path(bindir, Dir) :-
