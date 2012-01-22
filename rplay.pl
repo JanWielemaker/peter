@@ -23,17 +23,17 @@
 :- pce_autoload(finder, library(find_file)).
 
 resource(open,	      image, image('16x16/open.xpm')).
-resource(text,	      image, image('text.xpm')).
-resource(undo,	      image, image('undo.xpm')).
-resource(ok,	      image, image('answer_good.xpm')).
-resource(wrong,	      image, image('answer_bad.xpm')).
-resource(scroll,      image, image('scroll.xpm')).
-resource(select,      image, image('select.xpm')).
-resource(deselect,    image, image('deselect.xpm')).
-resource(deselectall, image, image('deselectall.xpm')).
-resource(up,	      image, image('up.xpm')).
-resource(down,	      image, image('down.xpm')).
-resource(magnify,     image, image('magnify.xpm')).
+resource(text,	      image, image('text.gif')).
+resource(undo,	      image, image('undo.gif')).
+resource(ok,	      image, image('answer_good.gif')).
+resource(wrong,	      image, image('answer_bad.gif')).
+resource(scroll,      image, image('scroll.gif')).
+resource(select,      image, image('select.gif')).
+resource(deselect,    image, image('deselect.gif')).
+resource(deselectall, image, image('deselectall.gif')).
+resource(up,	      image, image('up.gif')).
+resource(down,	      image, image('down.gif')).
+resource(magnify,     image, image('magnify.gif')).
 
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -42,7 +42,7 @@ Replay Peter task logfiles.  Design:
 	* Load a logfile, storing it as the predicates
 
 		log_header(HeaderTerm).
-	  	log_event(N, Time, Event).
+		log_event(N, Time, Event).
 
 	  Multiple logfiles can be concatenated this way.
 
@@ -94,7 +94,7 @@ time_of_event(Id, Time) :-
 	).
 
 %	log_event_id(Id)
-%	
+%
 %	Enumaret the event-id's of the current log.
 
 log_event_id(Id) :-
@@ -332,7 +332,7 @@ initialise(P) :->
 	send(TB, attribute, reference, point(0,0)),
 	send(HG, attribute, reference, point(0,0)),
 	send(D, resize_message, message(D, layout, @arg2)),
-	send_list(TB, append, 
+	send_list(TB, append,
 		  [ tool_button(load,
 				resource(open),
 				'Load Logfile')
@@ -410,7 +410,7 @@ play_to(P, Id:int) :->
 	send(P, goto_start_of_experiment, Id),
 	send(P, slot, skipping, @off),
 	play_to(P, Id).
-	
+
 
 play_to(P, Id) :-
 	send(P, slot, play_status, playing),
@@ -463,7 +463,7 @@ delay_to(P, Time:real) :->
 	    ;   send(P, delay, Delay)
 	    )
 	).
-	
+
 delay(P, Time:real) :->
 	"Do the real delay"::
 	get(P, member, dialog, D),
@@ -517,7 +517,7 @@ rplay(Time, Action, Player) :-
 	send(Player, delay_to, Time),
 	get(Player, simulator, Optica),
 	rdo(Action, Optica).
-	
+
 rdo(set(Variable, Value), Peter) :-
 	send(Peter, set_variable, Variable, Value).
 rdo(unset(_Variable), Peter) :-

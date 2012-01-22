@@ -23,15 +23,15 @@
 	      new(elevation(@nil, 2))).
 
 
-resource(smallleft,	image,	image('smallleft.xpm')).
-resource(smallright,	image,	image('smallright.xpm')).
-resource(up,		image,  image('up.xpm')).
-resource(left,		image,  image('left.xpm')).
-resource(down,		image,  image('down.xpm')).
-resource(right,		image,  image('right.xpm')).
-resource(empty,		image,  image('emptybook.xpm')).
-resource(note,		image,  image('notebook.xpm')).
-resource(annotation,	image,  image('openbook.xpm')).
+resource(smallleft,	image,	image('smallleft.gif')).
+resource(smallright,	image,	image('smallright.gif')).
+resource(up,		image,  image('up.gif')).
+resource(left,		image,  image('left.gif')).
+resource(down,		image,  image('down.gif')).
+resource(right,		image,  image('right.gif')).
+resource(empty,		image,  image('emptybook.gif')).
+resource(note,		image,  image('notebook.gif')).
+resource(annotation,	image,  image('openbook.gif')).
 
 :- pce_begin_class(experiment, figure).
 
