@@ -1,0 +1,7 @@
+To Create an executable:
+
+  - Load mkruntime.pl and login.pl
+
+  - Run ?- make_runtime.
+
+Or, simply open s.pl
