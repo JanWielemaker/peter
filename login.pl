@@ -121,7 +121,7 @@ ok(D) :->
 	    ;   send(D, error, no_student_name),
 		fail
 	    )
-	;   send(new(B, peter), open)
+	;   send(new(peter), open)
 	),
 	send(D, destroy).
 

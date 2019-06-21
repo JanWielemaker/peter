@@ -10,6 +10,7 @@
 :- module(rplay,
 	  [ rplay/0
 	  ]).
+:- use_module(library(pce)).
 :- use_module(save).
 :- use_module(optica(pretty_print)).
 :- use_module(optica(configdb)).
@@ -71,9 +72,9 @@ log_end_time(Time) :-
 	flag(log_last, N, N),
 	Last is N - 1,
 	log_event(Last, Stamp, _Event), !,
-	(   Stamp = From-To
+	(   Stamp = _From-To
 	->  Time = To
-	;   Time = From
+	;   Time = Stamp
 	).
 log_end_time(0).
 
