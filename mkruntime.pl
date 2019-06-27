@@ -18,14 +18,17 @@
 :- dynamic
 	release/0.
 
-%release.
+user:file_search_path(dll, Dir) :-
+	current_prolog_flag(executable, WinExe),
+	prolog_to_os_filename(Exe, WinExe),
+	file_directory_name(Exe, Dir).
 
 runtime_dir(runtime).			% path to runtime directory
 runtime_exe('peter.exe').
 
 bindir(runtime(bin)).
 
-option(emulator(swi('bin/swipl-win.exe'))).
+option(emulator(dll('swipl-win.exe'))).
 option(goal(main)).
 
 resource('*.cfg').
@@ -34,13 +37,13 @@ resource(pictures).
 resource('ChangeLog').
 resource('*.html').
 
-resource(swi('runtime/swipl.dll'), [type(dll)]) :-
-	release.
-resource(swi('bin/swipl.dll'), [type(dll)]) :-
-	\+ release.
-resource(swi('bin/pl2xpce.dll'),   [type(dll)]).
-resource(swi('bin/plterm.dll'),    [type(dll)]).
-resource(swi('bin/pthreadVC.dll'), [type(dll)]).
+dll('libswipl.dll').
+dll('pl2xpce.dll').
+dll('plterm.dll').
+dll('libgcc_s_seh-1.dll').
+dll('libwinpthread-1.dll').
+dll('zlib1.dll').
+dll('libgmp-10.dll').
 
 ignore_file('CVS').
 ignore_file('Backup').
@@ -74,6 +77,7 @@ user:file_search_path(bindir, Dir) :-
 make_runtime :-
 	make_directories,
 	make_swipl,
+	copy_dlls,
 	copy_resources,
 	pce_autoload_all,
 	findall(O, option(O), Options),
@@ -128,6 +132,9 @@ copy_resource(Spec, Options) :-
 			   [ access(read)
 			   ], Path),
 	make(Path, ToDir).
+
+copy_dlls :-
+	forall(dll(Spec), copy_resource(dll(Spec), [type(dll)])).
 
 dest_dir(Options, Dir) :-
 	memberchk(type(dll), Options), !,
