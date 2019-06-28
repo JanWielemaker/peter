@@ -44,6 +44,7 @@ dll('libgcc_s_seh-1.dll').
 dll('libwinpthread-1.dll').
 dll('zlib1.dll').
 dll('libgmp-10.dll').
+dll('libjpeg-9.dll').
 
 ignore_file('CVS').
 ignore_file('Backup').
